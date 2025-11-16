@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marwadi University Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .Topnav{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items:center;
+            padding-left: 50%;
+            letter-spacing: normal;
+            justify-content: space-evenly;
+        }
+        .Topnav a{
+            text-decoration: none;
+            color:rgb(18, 3, 3);
+            font-size: 16px;
+            font-weight: bold; 
+        }
+        .Topnav a:hover{
+            color: rgb(8, 212, 8);
+        }
+        button{
+            width: 120px;
+            height: 30px;
+            background-color: rgb(129, 75, 4);
+            border: none;
+            border-radius: 9px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        button a{
+            color: rgb(235, 228, 228);
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: rgb(5, 208, 55);
+            color: rgb(129, 75, 4);
+            border: 1px solid rgb(249, 247, 245);
+        }
+        header{
+            width:100%;
+            height: 94px;
+            margin-top: 1%;
+            background-color:#d6c6b6;
+        }
+        .logo1{
+            width: 20%;
+            height: 100%;
+            float: left;
+            background-image: url("logo.svg");
+            background-size: 70% 70%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .navbar{
+            width: 80%;
+            height: 100%;
+            float: right;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .navbar a{
+            font-size: 18px;
+            color: rgb(129, 75, 4);
+            text-decoration: none;
+        }
+        .navbar a:hover{
+            color: rgb(249, 20, 7); 
+        }
+        .box{
+            width: 365px;
+            height: 320px;
+            background-color: rgb(4, 26, 66);
+            margin-left: 3%;
+            margin-top: 6%;
+        }
+        .box h1{
+            color: rgb(241, 237, 237);
+            text-align: center;
+            font-size: 70px;
+            font-weight: bold;
+        }
+        .arrow{
+            margin-top:2%;
+            margin-left: 3%;
+        }
+        .image{
+            margin-top:-29%;
+            margin-left:30%;
+        }
+        .box1{
+            width: 355px;
+            height: 245px;
+            margin-left: 3%;
+            margin-top:-24%;
+        }
+        .box1 h1{
+            margin-top:-2%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .shield{
+            width: 140px;
+            height: 140px;
+            margin-left: 81%;
+            margin-top: -18%;
+        }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(4, 26, 66);
+            font-weight: bold;
+            text-align: center;
+            font-size: 40px;
+            margin-top: 8%;
+        }
+        .facilities{
+            margin-top:8%;
+            width: 100%;
+            height: 100%;
+            float: right;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .facilities a{
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+        }
+        .container{
+            width: 1200px;
+            height: 500px;
+            display: flex;
+            margin-left: 5%;
+            margin-top: 13%;
+        }
+
+        .left-box {
+            width: 360px;
+            height: 500px;
+            background-image: url("image/1.png");
+            border-radius: 6%;
+        }
+        .right-grid {
+            flex: 1; 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .right-grid #harry:hover {
+            transform: scale(1.1);
+            transition: 0.2s;
+        }
+        .grid-box {
+            width: 228px;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border: 1px solid #703e04;
+            border-radius: 8%;
+            gap: 8px;
+        }
+        .program-card-icon{
+            width: 32px;
+            height: 32px;
+        }
+
+        .matter{
+            margin-top:8%;
+            width: 100%;
+            height: 100%;
+            float: right;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .matter a{
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .campus{
+            margin-top: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .facilities-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            margin-top: 20%;
+        }
+        .facilities-section span{
+            padding: 2px;
+            color: #ded607;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom:5% ;
+        }
+        .facilities-title {
+            font-size: 36px;
+            color: #080101;
+            margin-bottom: 20px;
+            font-weight: bold;
+            margin-top: 4%;
+        }
+        .excellence-section{
+            width: 100%;
+            height: 240px;
+            background-color: hwb(30 60% 5%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8%;
+        }
+        .icon-text{
+            width: 299px;
+            height: 233px;
+            margin-left: 3%;
+        }
+        .content-wrapper{
+            width: 800px;
+            height: 100%;
+            color: rgb(24, 189, 27);
+            margin-top: -2%;
+        }
+        .description{
+            width: 100%;
+            margin-top: -25%;
+            margin-left: 40%;
+            display: block;
+            font-size:14px;
+            align-items: center;
+            color: #000;
+        }
+
+        .life-container{
+            width: 100%;
+            height: 700px;
+        }
+
+        .container4{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 40px
+        }
+
+        .container4 .left{
+            width: 30%;
+            height: 98%;
+            border-radius: 15px;
+        }
+        .container4 .left #leftcontainer{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            background-size: cover;
+        }
+        .container4 .left #leftcontainer:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        .container4 .right{
+            width: 65%;
+            height: 100%;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .container4 .right #up{
+            width: 100%;
+            height: 35%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .container4 .right #down{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .container4 .right #e ,#b , #c , #d {
+            width: 22%;
+            height:100%;
+            border-radius: 15px;
+        }
+        .container4 .right #b1 , #c1 ,#d1 ,#e1 {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            background-size: cover;
+        }
+        .container4 .right #b1:hover,
+        .container4 .right #c1:hover,
+        .container4 .right #d1:hover,
+        .container4 .right #e1:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        .container4 .right #f1 , #g1 ,#h1 {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            background-size: cover;
+        }
+
+        .container4 .right #f , #g ,#h {
+            width: 30%;
+            height:100%;
+            border-radius: 15px;
+        }
+        .container4 .right #h:hover,
+        .container4 .right #g:hover,
+        .container4 .right #f:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        h2{
+            text-align: center;
+            color: rgb(4, 26, 66);
+            font-weight: bold;
+            font-size: 40px;
+            margin-top: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Recruiters Section */
+        .recruiters {
+            padding: 60px 0;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .recruiters h2 {
+            text-align: center;
+            font-size: 38px;
+            font-weight: 700;
+            color: #012D46;
+            margin-bottom: 40px;
+        }
+        .marquee {
+            white-space: nowrap;
+            display: flex;
+        }
+        .companyLogos {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+        .logo {
+            padding: 0 40px;
+        }
+        .logo img {
+            height: 45px;
+            transition: filter 0.1s, opacity 0.1s;
+        }
+        .logo img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-30%); }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Container for sections */
+        .faq-container, .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* --- FAQ Section --- */
+        .faq-container {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .faq-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.125rem;
+            list-style: none; /* Hide the default marker */
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none; /* Hide marker for Safari */
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #8B5CF6;
+            transition: transform 0.2s;
+        }
+
+        .faq-item[open] > .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            color: #555;
+            margin-top: 1rem;
+        }
+
+        /* --- Footer Section --- */
+        .site-footer {
+            background-color: #fdfaf4;
+            padding-top: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        /* Next Step Section */
+        .next-step-section {
+            margin-bottom: 3rem;
+        }
+
+        .next-step-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .next-step-card {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e2d9c6;
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+        .next-step-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .card-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #d97706;
+            margin-right: 1rem;
+        }
+
+        .card-arrow {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #9ca3af;
+        }
+
+        /* Footer Links Grid */
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        .footer-column {
+            grid-column: span 1;
+        }
+
+        .footer-column-large {
+            grid-column: span 2;
+        }
+
+        .footer-heading {
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-heading.extra-margin {
+            margin-top: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .footer-links a {
+            color: #4b5563;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #d97706;
+        }
+
+        /* Contact and Social */
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .social-icons a { color: #4b5563; }
+        .social-icons a:hover { color: #1d4ed8; }
+        .social-icons svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+        .contact-info p {
+            display: flex;
+            align-items: flex-start;
+            margin: 0;
+        }
+        .contact-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* App Stores */
+        .app-stores {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .app-stores img {
+            height: 40px;
+        }
+
+        /* Stories of Excellence section */
+        .excellence-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .excellence-header {
+            text-align: center;
+        }
+
+        .excellence-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: #1F2937;
+            margin-bottom: 1.5rem;
+        }
+
+        .excellence-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .excellence-nav .nav-link {
+            color: #6B7280;
+            text-decoration: none;
+            padding-bottom: 0.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .excellence-nav .nav-link:hover {
+            color: #B45309;
+        }
+
+        .excellence-nav .nav-link.active {
+            color: #B45309;
+            border-bottom: 2px solid #B45309;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .image-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-card:hover {
+            transform: scale(1.05);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .pagination-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .pagination-dots .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #D1D5DB;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .pagination-dots .dot:hover {
+            background-color: #D97706;
+        }
+
+        .pagination-dots .dot.active-dot {
+            background-color: #B45309;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 1024px) {
+            .footer-links-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .footer-column-large {
+                grid-column: span 2;
+            }
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .next-step-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-column-large {
+                grid-column: span 2;
+            }
+            .container {
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                margin-left: 0;
+                align-items: center;
+            }
+            .left-box{
+                width: 90%;
+                margin-bottom: 20px;
+            }
+            .right-grid{
+                width: 90%;
+            }
+            .container4{
+                flex-direction: column;
+                height: auto;
+            }
+            .container4 .left,
+            .container4 .right{
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .excellence-title {
+                font-size: 1.875rem;
+            }
+
+            .excellence-nav {
+                gap: 1.5rem;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-links-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-column, .footer-column-large {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Topnav">
+        <button>Apply Now</button>
+        <a href="">login</a>
+        <a href="">Outcome Based Education</a>
+        <a href="">Parents</a>
+        <a href="">Alumni</a>
+    </div>
+
+    <header>
+        <div class="logo1"></div>
+        <div class="navbar">
+            <a href="">Academics <span><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/dropdown.svg" alt=""></span></a>
+            <a href="">Addmision & Aid <span><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/dropdown.svg" alt=""></span></a>
+            <a href="">Life At University <span><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/dropdown.svg" alt=""></span></a>
+            <a href="">Placement</a>
+            <a href="">About Us <span><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/dropdown.svg" alt=""></span></a>
+            <a href="">International <span><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/dropdown.svg" alt=""></span></a>
+            <a href="">Contact</a>
+        </div>
+    </header>
+
+    <div class="box">
+        <h1>Shaping Leaders Of Tomorrow</h1>
+    </div>
+    <div class="arrow">
+        <svg width="16" height="149" viewBox="0 0 16 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 1C9 0.447715 8.55228 -2.41411e-08 8 0C7.44772 2.41411e-08 7 0.447715 7 1L9 1ZM7.2929 148.707C7.68342 149.098 8.31659 149.098 8.70711 148.707L15.0711 142.343C15.4616 141.953 15.4616 141.319 15.0711 140.929C14.6805 140.538 14.0474 140.538 13.6569 140.929L8.00001 146.586L2.34315 140.929C1.95263 140.538 1.31946 140.538 0.928938 140.929C0.538414 141.319 0.538414 141.953 0.928938 142.343L7.2929 148.707ZM7 1L7 3.04167L9 3.04167L9 1L7 1ZM7 7.125L7 11.2083L9 11.2083L9 7.125L7 7.125ZM7 15.2917L7 19.375L9 19.375L9 15.2917L7 15.2917ZM7 23.4583L7 27.5417L9 27.5417L9 23.4583L7 23.4583ZM7 31.625L7 35.7083L9 35.7083L9 31.625L7 31.625ZM7 39.7917L7 43.875L9 43.875L9 39.7917L7 39.7917ZM7 47.9583L7 52.0417L9 52.0417L9 47.9583L7 47.9583ZM7 56.125L7 60.2083L9 60.2083L9 56.125L7 56.125ZM7 64.2917L7 68.375L9 68.375L9 64.2917L7 64.2917ZM7 72.4583L7 76.5417L9 76.5417L9 72.4583L7 72.4583ZM7 80.625L7 84.7083L9 84.7083L9 80.625L7 80.625ZM7 88.7917L7 92.875L9 92.875L9 88.7917L7 88.7917ZM7 96.9583L7 101.042L9 101.042L9 96.9583L7 96.9583ZM7 105.125L7 109.208L9 109.208L9 105.125L7 105.125ZM7 113.292L7.00001 117.375L9.00001 117.375L9 113.292L7 113.292ZM7.00001 121.458L7.00001 125.542L9.00001 125.542L9.00001 121.458L7.00001 121.458ZM7.00001 129.625L7.00001 133.708L9.00001 133.708L9.00001 129.625L7.00001 129.625ZM7.00001 137.792L7.00001 141.875L9.00001 141.875L9.00001 137.792L7.00001 137.792ZM7.00001 145.958L7.00001 148L9.00001 148L9.00001 145.958L7.00001 145.958Z" fill="#012D46"></path>
+        </svg>
+    </div>
+    <div class="image">
+        <img class="character" src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/3.png" alt="">
+    </div>
+    <div class="box1">
+        <h1>Welcome to Marwadi university where we make students'
+            holistic development our focus.</h1>
+    </div>
+    <div class="ApplyNow">
+        <img class="shield" src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/applyShield.png" alt="">
+    </div>
+
+    <h1>Find The Right Programme</h1>
+    <div class="facilities">
+        <a href="">UNDERGRADUATE</a>
+        <a href="">POSTGRADUATE</a>
+        <a href="">DIPLOMA COURCE</a>
+        <a href="">RESEARCH & INNOVATION</a>
+        <a href="">ONLINE COURCE</a>
+    </div>
+
+    <div class="container">
+        <div class="left-box"></div>
+        <div class="right-grid">
+            <div  class="grid-box" id="eng"><span><img class="program-card-icon" src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/programicon1.svg" alt=""></span>Engineering & Technology</div>
+            <div class="grid-box"><span><img class="program-card-icon" src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/programicon2.svg" alt=""></span>Pharmacy</div>
+            <div class="grid-box"><span><img class="program-card-icon" src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/programicon4.svg" alt=""></span>Law</div>
+            <div class="grid-box" id="harry"><span><img class="program-card-icon" src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/programicon5.svg" alt=""></span>Management</div>
+            <div class="grid-box"><span><img class="program-card-icon" src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/programicon3.svg" alt=""></span>Arts</div>
+            <div class="grid-box"><span><img class="program-card-icon" src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/programicon6.svg" alt=""></span>Science</div>
+            <div class="grid-box"><span><img class="program-card-icon" src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/computericon.svg" alt=""></span>Computer Application</div>
+            <div class="grid-box"><span><img class="program-card-icon" src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/Physiotherapy.svg" alt=""></span>Physiotherapy</div>
+            <div class="grid-box"><span><img class="program-card-icon" src="" alt="" id="nurse"></span>Nursing</div>
+        </div>
+    </div>
+
+    <h1>Why US</h1>
+    <div class="matter">
+        <div class="one">
+            <h1>A+</h1>
+            <h3>NAAC Accredited </h3>
+        </div>
+        <div class="two">
+            <h1>Tier-1</h1>
+            <h3>NAAC Accredited </h3>
+        </div>
+        <div class="tree">
+            <h1>770+</h1>
+            <h3>Global Alliances</h3>
+        </div>
+        <div class="Four">
+            <h1>250</h1>
+            <h3>Global Alliances</h3>
+        </div>
+    </div>
+
+    <section class="facilities-section">
+        <h1 class="facilities-title">What’s on Campus</h1>
+        <div class="facilities-list">
+            <span class="facility-item">Hostels</span>
+            <span class="facility-item">Transportation</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Library</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Physical Education</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Student Clubs</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Music &amp; Dance</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Cafeteria</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Amphitheatre</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Medical Room</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Lake and Jogging Track</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">highly secure</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Auditorium</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Banking and ATM Facility</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Sports Club</span>
+            <span class="facility-dot">.</span>
+            <span class="facility-item">Advanced Labs</span>
+        </div>
+    </section>
+
+    <section class="excellence-section">
+        <div class="content-wrapper">
+            <div class="icon-text">
+                <h2 class="title">Center of Excellence</h2>
+                <span class="italic-text-gov">A Government of Gujarat Award</span>
+            </div>
+            <span class="description">
+                Marwadi University has been proudly recognized as a <strong style="font-weight:600;font-size:20px;">"Centre
+                of Excellence" by the Government of Gujarat</strong>, placing it among the <strong style="font-weight:600;font-size:20px;">Top Seven Institutions in the state</strong>.
+                This prestigious status highlights the university's commitment to providing Quality Education, Excellent
+                Research, Innovative Teaching Methodologies, Quality of Extension Services, High Employability and
+                Entrepreneurship are being imparted.
+            </span>
+        </div>
+    </section>
+
+    <div class="campus">
+        <h1>Life On Campus</h1>
+    </div>
+
+    <div class="container4">
+        <div class="left">
+            <img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/08/festival.png" alt="" id="leftcontainer">
+        </div>
+        <div class="right">
+            <div id="up">
+                <div id="b"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/08/campus-beat.png" alt="" id="b1"></div>
+                <div id="c"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/08/sports.png" alt="" id="c1"></div>
+                <div id="d"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/07/cultural-festival.jpg" alt="" id="d1"></div>
+                <div id="e"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/07/mu-fest.jpg" alt="" id="e1"></div>
+            </div>
+            <div id="down">
+                <div id="f"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/07/student-club.jpg" alt="" id="f1"></div>
+                <div id="g"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/08/cafeteria.png" alt="" id="g1"></div>
+                <div id="h"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/07/advance-lab.jpg" alt="" id="h1"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stories of Excellence -->
+    <div class="excellence-container">
+        <div class="excellence-header">
+            <h2 class="excellence-title">
+                Stories of Excellence
+            </h2>
+            <nav class="excellence-nav">
+                <a href="#" class="nav-link active">STUDENTS</a>
+                <a href="#" class="nav-link">ALUMNI</a>
+                <a href="#" class="nav-link">RECRUITERS</a>
+                <a href="#" class="nav-link">PARENTS</a>
+            </nav>
+        </div>
+
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="image/harry.jpg" alt="Portrait of a student" id="student1">
+            </div>
+            <div class="image-card">
+                <img src="image/shivam.jpg" alt="Portrait of a student with an award">
+            </div>
+            <div class="image-card">
+                <img src="image/group.jpg" alt="Portrait of a smiling student">
+            </div>
+        </div>
+
+        <div class="pagination-dots">
+            <button class="dot active-dot"></button>
+            <button class="dot"></button>
+        </div>
+    </div>
+
+    <!-- Recruiters -->
+    <section class="recruiters">
+        <h2>Our Recruiters</h2>
+        <div class="marquee">
+            <div class="companyLogos">
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/recruiters/TCS.png" alt="TCS"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/recruiters/Rtcamp.png"  alt="rtCamp"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/Federal-Bank.png" alt="Federal Bank"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/Fintech-Global-Center.jpg" alt="Fintech Global Center"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/Adani.png" alt="Adani"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/recruiters/Adani.png" alt="Reliance Industries"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/recruiters/Zomato.png" alt="Zomato"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/google.png" alt="Google"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/HDFC-Bank.png" alt="HDFC Bank"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/recruiters/techm.png" alt="Tech Mahindra"></div>
+
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/TCS.png" alt="TCS"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/rtcamp.png" alt="rtCamp"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/Federal-Bank.png" alt="Federal Bank"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/recruiters/HDFC-Bank.png" alt="Fintech Global Center"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/Adani.png" alt="Adani"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/Adani.png" alt="Adani"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/recruiters/Adani.png" alt="Reliance Industries"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/Zomato.png" alt="Zomato"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/recruiters/google.png" alt="Google"><i class="ri-google-fill"></i></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/recruiters/sp-global.jpg" alt="SP Global"></div>
+                <div class="logo"><img src="https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/06/techm.png" alt="Tech Mahindra"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <div class="faq-container">
+        <h1 class="faq-title">FAQs</h1>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary class="faq-question">
+                    Is there any Loan Facility Available ?
+                </summary>
+                <p class="faq-answer">
+                    Yes, the university has tie-ups with several banks to facilitate education loans for students. You can contact the admission office for more details and assistance with the loan application process.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">
+                    Is there any Scholarship Available ?
+                </summary>
+                <p class="faq-answer">
+                    Absolutely. We offer a range of merit-based and need-based scholarships. Please visit the 'Scholarships' section on our website for detailed criteria and application deadlines.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">
+                    How is the Placement at Marwadi University ?
+                </summary>
+                <p class="faq-answer">
+                    Marwadi University has a dedicated placement cell that works tirelessly to bring top companies to campus. We have a consistent track record of excellent placements across various industries.
+                </p>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">
+                    How to Reach MU ?
+                </summary>
+                <p class="faq-answer">
+                    The university is well-connected by road. It is located on the Rajkot-Morbi Highway. You can easily reach us via public transport, taxi, or private vehicle. Our location is also available on Google Maps.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-question">
+                    Is there a Hostel Facility available at Marwadi University ?
+                </summary>
+                <p class="faq-answer">
+                    Yes, we provide separate, fully-equipped hostel facilities for both boys and girls with all modern amenities including Wi-Fi, laundry services, and 24/7 security.
+                </p>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">
+                    What is the Fee Structure of Degree Programmes at Marwadi University ?
+                </summary>
+                <p class="faq-answer">
+                    The fee structure varies depending on the program. You can find detailed fee information for each course on its respective page on our official website or in the university brochure.
+                </p>
+            </details>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="next-step-section">
+                <h2 class="section-title">Take the Next Step</h2>
+                <div class="next-step-grid">
+                    <a href="#" class="next-step-card">
+                        <div class="card-content">
+                            <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                            <span>APPLY NOW</span>
+                        </div>
+                        <svg class="card-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                    <a href="#" class="next-step-card">
+                        <div class="card-content">
+                            <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>GET IN TOUCH</span>
+                        </div>
+                        <svg class="card-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                    <a href="#" class="next-step-card">
+                        <div class="card-content">
+                            <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>VISIT THE CAMPUS</span>
+                        </div>
+                        <svg class="card-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">UGC Proform</a></li>
+                        <li><a href="#">Disclosure</a></li>
+                        <li><a href="#">NIRF</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                        <li><a href="#">Naac</a></li>
+                        <li><a href="#">Tender</a></li>
+                        <li><a href="#">Right to Information</a></li>
+                        <li><a href="#">Annual Report</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Centres</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">MUIR</a></li>
+                        <li><a href="#">CEFB</a></li>
+                    </ul>
+                    <h3 class="footer-heading extra-margin">Cells</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Women Cell</a></li>
+                        <li><a href="#">Placement Cells</a></li>
+                        <li><a href="#">Anti Ragging Cells</a></li>
+                        <li><a href="#">Equal Opportunity Cell</a></li>
+                        <li><a href="#">Socio-Economically Disadvantaged Group Cell (SEDG)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Downloads</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Brochure</a></li>
+                        <li><a href="#">MU Statues & Ordinances</a></li>
+                        <li><a href="#">University Strategic Plan</a></li>
+                        <li><a href="#">Inclusion as per section 2(f) of the UGC Act 1956</a></li>
+                        <li><a href="#">Act No. 8 of 2016</a></li>
+                        <li><a href="#">Whistleblower Policy</a></li>
+                        <li><a href="#">UGC Proform</a></li>
+                        <li><a href="#">SIRO Recognition</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Students Corner</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">LMS</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">Convocation</a></li>
+                        <li><a href="#">Internal Complaints Committee</a></li>
+                        <li><a href="#">National Academy Depository</a></li>
+                        <li><a href="#">DigiLocker NAD</a></li>
+                        <li><a href="#">NAD-ABC</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column-large">
+                    <h3 class="footer-heading">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.35C0 23.41.59 24 1.325 24H12.82v-9.29H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h5.698c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg></a>
+                        <a href="#"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.012 3.584-.07 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85C2.253 3.854 3.771 2.309 7.021 2.163 8.286 2.102 8.665 2.09 12 2.09m0-2.09c-3.264 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.058 1.281-.072 1.684-.072 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.684.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.281.072-1.684.072-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.264 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg></a>
+                        <a href="#"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                        <a href="#"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                    </div>
+
+                    <h3 class="footer-heading">Reach Us</h3>
+                    <div class="contact-info">
+                        <p>
+                            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>Rajkot-Morbi Road, Rajkot 360003 Gujarat, India</span>
+                        </p>
+                        <p>
+                            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span>+912817123456</span>
+                        </p>
+                        <p>
+                            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>info@marwadiuniversity.ac.in</span>
+                        </p>
+                        <p>
+                            <svg class="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span>+919898030090</span>
+                        </p>
+                    </div>
+
+                    <h3 class="footer-heading">Download App</h3>
+                    <div class="app-stores">
+                        <a href="#"><img src="https://placehold.co/135x40/000000/FFFFFF?text=Google+Play" alt="Get it on Google Play"></a>
+                        <a href="#"><img src="https://placehold.co/120x40/000000/FFFFFF?text=App+Store" alt="Download on the App Store"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
